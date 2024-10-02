@@ -1,0 +1,537 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face{
+    font-family: 'Galo';
+    src: url("fonts/NeueHaasDisplayMediu.ttf");
+}
+@font-face{
+    font-family: 'Chalo';
+    font-weight: 100;
+    src: url("fonts/NeueHaasDisplayLight.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Galo';
+
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --defbor : 1px solid rgb(192, 190, 190);
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    position: relative;
+    padding:  0 2vw;
+    /* border: var(--defbor); */
+}
+
+nav{
+    padding-top: 2em;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EFEAE3;
+}
+
+#logo{
+    height: 20vh;
+    width: 10vw;
+}
+
+
+li a{
+    text-decoration: none;
+    font-family:  'Chalo';
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 10;
+}
+
+#products{
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    list-style-type: none;
+}
+
+#products {
+    padding: 20px;
+}
+
+
+#products li{
+    border: var(--defbor) ;
+    padding: 1.3em;
+    padding-top: 0.476em;
+    padding-bottom: 0.678em;
+    border-radius: 60px;
+    font-size:  1em;
+    font-weight: 500;
+    line-height: 1.4;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+
+
+
+
+#products li::after{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: all   ease 0.3s ;
+
+    
+}
+
+#products li:hover::after{
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+#products li:hover a{
+    color: aliceblue;
+} 
+
+#page1-body{
+    height: 70vh;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 18vh;
+    padding-bottom: 2.8em ;
+    border-bottom: var(--defbor);
+}
+
+.left{
+    width: 28vw;
+    line-height: 1.2;
+    font-family:'Galo' ;
+    font-weight: 700;
+    font-size: 1.2vw;
+    
+}
+
+.right h1{
+    font-size: 11vw;
+    line-height: 19vh;
+    text-align: right;
+    letter-spacing: 0.01vw;
+    font-family: 'Galo';
+    padding: 1vw;
+}
+
+#page1 video{
+    position: relative;
+    margin-top: 10vh;
+    width: 100%;
+    border-radius: 22px;
+}
+
+#orange-ball{
+    height: 70vh;
+    width: 50vw;
+    position: absolute;
+    right: 0;
+    top: 90vh;
+    
+}
+
+.first{
+    width: 100%;
+    height: 100%;
+     filter: blur(20px);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #0a88fe;
+    position: absolute;
+}
+.second{
+    width: 20vw;
+    height: 40vh;
+    bottom: 1vh;
+    left: 20vw;
+      border-radius:50%;
+      background:linear-gradient(rgb(17, 180, 255) ,#0041a3 ) ;
+      filter: blur(20px);
+      position: absolute;
+      animation-name: anime-1;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-direction:alternate-reverse;
+      animation-iteration-count: infinite;
+}
+.third{
+        width: 30vw;
+        height: 80vh;
+        left: 7vw;
+          border-radius:50%;
+          background:linear-gradient(rgb(17, 180, 255) ,#01409e  );
+          filter: blur(20px);
+          position: absolute;
+          animation-name: anime-2;
+          animation-duration: 3s;
+          animation-timing-function: ease-in-out;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+}
+
+.forth{
+    width: 20vw;
+        height: 60vh;
+          border-radius:50%;
+          background:linear-gradient(rgb(17, 180, 255) ,#004ec4   )  ;
+          filter: blur(15px);
+          position: absolute;
+          animation-name: anime-3;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-direction: alternate-reverse;
+          animation-iteration-count: infinite;
+}
+
+@keyframes anime-1 {
+    from{
+        transform: translate(0% , 10% );
+    }
+    to{
+        transform: translate(20% , -30%) ;
+    }
+}
+@keyframes anime-2 {
+    from{
+        transform: translate(0% , 20%);
+    }
+    to{
+        transform: translate(0% , -8%);
+    }
+        
+    }
+
+@keyframes anime-3 {
+    from{
+        transform: translate(50% , 50%);
+    }
+    to{
+        transform: translate(0% , -8%);
+    }
+}
+
+
+/* Page-2 */
+
+#page2{
+    padding: 18vh 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+.con h1{
+    /* background-color: #FE330A; */
+    font-size: 10vw;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#infinite-moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#infinite-moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+
+.con{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.con .gola{
+    display: inline-block;
+    height: 4vw;
+    width: 4vw;
+    background-color:#0a88fe;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+/* bottom-page */
+
+#bottom-page{
+    height: 100vh;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw 0;
+    padding-left: 4vw;
+    padding-right: 3em;
+    
+}
+
+#bottom-page h1{
+    font-size: 4.8vw;
+    width: 70%;
+    line-height: 10vh;
+    margin: 0 0.5em;
+    position: relative;
+    z-index: 10;
+    
+}
+.bottom-div{
+    width: 28%;
+    padding: 0 2em;
+    
+}
+
+.bottom-div img{
+    margin-top: 14em;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.bottom-div p{
+    font-family: 'Chalo';
+    margin-top: 3em;
+}
+
+
+#page2 #moye-moye{
+    height: 40vmax;
+    width: 38vmax;
+    position: absolute;
+    left: 25vw;
+    top: 85vh;
+    background:linear-gradient(to bottom left ,rgb(15, 156, 250),#0077ff) ;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: moye-1;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(8px);
+}
+
+
+
+@keyframes moye-1 {
+    from{
+        transform: translate(10% , -10%)  skew(0deg);
+
+       
+    }
+    to{
+        filter: blur(2em);
+        transform: translate(-10% , 10%) skew(12deg);
+    }
+}
+
+
+
+/* Page-3 */
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+ #page3 #heading{
+    height: 15vmin;
+    width: 100%;
+    /* background-color: #FE330A; */
+    /* border-bottom: var(--defbor); */
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    padding:  0 1.8em;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    gap: 0.6em;
+    
+}
+
+.item{
+    height: 18vmin;
+    width: 100%;
+    /* background-color: #FE330A; */
+    border-bottom: var(--defbor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2em;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.item h1{
+    font-size: 3em;
+    position: relative;
+    z-index: 10;
+}
+
+.item p {
+    font-family: 'Chalo';
+    font-size: 0.9em;
+    text-align: right;
+    position: relative;
+    z-index: 10;
+}
+
+.item span{
+    font-family: 'Chalo';
+    color: rgb(156, 156, 156);
+}
+
+#heading .goli{
+    height: 8px;
+    width: 8px;
+    background-color: #0a6cfe;
+    border-radius: 50%;
+}
+
+#heading p{
+    font-family: 'Chalo';
+    font-size: 0.9em;
+}
+
+.over-layout{
+    height: 100%;
+    width: 100%;
+    background-color: #00ff62;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 224ms;
+}
+
+.item:hover .over-layout{
+    top: 0;
+}
+
+
+.item:hover span{
+    color: black;
+}
+
+#elem-container{
+    min-height: 100vh;
+    width: 100%;
+}
+
+#fixed-image{
+    height: 62vh;
+    width: 25vw;
+    /* background-color: #FE330A; */
+    border-radius: 18px;
+    position: fixed;
+    z-index: 12;
+    top: 18%;
+    left: 50%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#bottom-button {
+    margin-top: 3.2em ;
+    padding: 0 2em;
+    /* border: var(--defbor); */
+}
+#bottom-button button{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0.5em 2em;
+    background-color: #EFEAE3;
+    font-size: 1em;
+    font-family: 'Chalo';
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    border-radius: 50px;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+#bottom-button button::after{
+
+    content: " ";
+    background-color:#000000 ;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    left: 0;
+    border-radius: 100%;
+    bottom: -100%;
+    transition: all ease 0.2s;
+}
+
+
+#bottom-button button:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+
+/* Page-4 */
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    /* padding: 2em; */
+    background-color: #EFEAE3;
+}
